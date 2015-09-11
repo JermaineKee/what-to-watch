@@ -4,7 +4,7 @@ all_movies = {}
 all_users = {}
 
 
-class User:
+class User:   
     def __init__(self, user_id):
         self.id = user_id
         all_users[self.id] = self
