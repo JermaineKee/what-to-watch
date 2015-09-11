@@ -16,7 +16,7 @@ def tes_user_creation():
     assert user1.id == 5
     assert user2.id == 12
 
-
+   
 def tes_movie_creation():
     movie1 = Movie(3, 'Toy Story')
     movie2 = Movie(9, 'Pretty Woman')
