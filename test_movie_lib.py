@@ -8,7 +8,7 @@ movie2 = Movie(9, 'Pretty Woman')
 rating1 = Rating(siskel.id, movie1.id, 4)
 rating2 = Rating(ebert.id, movie2.id, 1)
 rating3 = Rating(siskel.id, movie2.id, 3)
-rating4 = Rating(ebert.id, movie)
+rating4 = Rating(ebert.id, movie1.id, 1)
 
 def tes_user_creation():
     user1 = User(5)
@@ -29,6 +29,7 @@ def test_rating_creation():
     assert rating1.user_id == rating3.user_id == siskel.id
     assert rating2.user_id == rating4.user_id == ebert.id
     assert ratings1.movie_id == rating4.movie_id == movie1.id
+    assert ratings2.movie_id == rating3.movie_id == movie2.id
 
 
 def test_find_ratings_for_movie():
